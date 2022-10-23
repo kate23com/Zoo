@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen&display=swap');
+
+@import "reset";
+
+@import "vars";
+
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+   margin: 0 auto;
+}
+
+/*TESTIMONIALS START*/
+
+.container {
+   padding: 0 10px;
+}
+
+.testimonials {
+   background: url(../asets/img/testimonials-bg.png) no-repeat;
+   background-position: right 106%;
+   background-size: 60px;
+   min-height: 580px;
+
+   &__title {
+      color: #333B41;
+      font-size: 24px;
+      line-height: 47px;
+      text-align: center;
+      padding: 30px 0 10px 0;
+   }
+
+   &__row {
+      @extend %flex-btw;
+      flex-direction: column;
+      gap: 15px;
+   }
+
+   &__block-body {
+      max-height: 109px;
+      min-width: 299px;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      background-image: linear-gradient(#FEBDAB 74%, #F3A9F8 66%, #E0D8F0 100%, #EAF7FE 100%, #EAF7FE 100%);
+      box-shadow: inset 0px 0px 0px 100vw #F5F7F6;
+   }
+
+   &__block-background {
+      background-color: #F5F7F6;
+      margin: 2px;
+      padding: 8px 10px;
+   }
+
+   .items {
+      @extend %flex-btw;
+      justify-content: flex-start;
+      gap: 6px;
+   }
+
+   .name {
+      color: black;
+      font-size: 16px;
+   }
+
+   .local {
+      font-size: 15px;
+      color: #BDBDBD;
+      font-weight: 300;
+      padding: 6px 0 0 0;
+   }
+
+   .feedback {
+      overflow: hidden;
+      max-height: 48px;
+      padding: 10px 0 0 0;
+   }
+
+   .feadback-text {
+      font-size: 15px;
+      line-height: 18px;
+      color: #4F4F4F;
+      font-weight: 300;
+      padding: 0 0 0 5px;
+   }
+
+   .block-2 .name-mila {
+      display: none;
+   }
+
+   &__button-body {
+      @extend %flex-center;
+      padding: 30px 0 60px 0;
+   }
+
+   &__button {
+      @extend %button-square;
+      text-align: center;
+      max-width: 240px;
+   }
+
+}
+
+/*TESTIMONIALS END*/
+
+/*FOOTER START*/
+.footer {
+   background-color: #111115;
+
+   &__grid {
+      @extend %grid
+   }
+
+   &__title {
+      position: relative;
+      font-size: 19px;
+      line-height: 23px;
+      color: #FFFFFF;
+      padding: 20px 0 30px 0;
+
+      img {
+         position: absolute;
+         top: 24%;
+         left: 58%;
+      }
+   }
+
+   &__social {
+      @extend %flex-btw;
+      min-width: 193px;
+   }
+
+   &__circle {
+      @extend %flex-center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+
+      span {
+         display: none;
+      &:hover {
+            color: $green;
+         }
+      }
+
+      &:hover {
+         background-color: $green;
+      }
+
+   }
+
+   &__youtube {
+      padding: 2px 0;
+   }
+
+   &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #FFFFFF;
+      padding: 40px 0 10px 0;
+      margin: 0 9px 0 0;
+   }
+
+   &__email-form {
+      input {
+         border: 1px solid #F9804B;
+         height: 42px;
+         width: 228px;
+         background-color: #111115;
+         border-radius: 2px;
+         padding: 10px;
+         margin: 0 0px 0 4px;
+
+         &:hover {
+            border: 1px solid $green;
+            color: $green;
+         }
+
+         &:disabled {
+            border: 1px solid #D31414;
+            color: #D31414;
+         }
+      }
+
+      ::placeholder {
+         font-size: 16px;
+         line-height: 22px;
+         color: #BDBDBD;
+
+         &:hover {
+            border: 1px solid #4B9200;
+         }
+
+         &:disabled {
+            border: 1px solid #D31414;
+         }
+      }
+   }
+
+   &__submit {
+      margin: 0 0 0 3px;
+   }
+
+   &__button-submit {
+      @extend %button-submit;
+      margin: 10px 0 40px 0;
+   }
+
+   &__button {
+      @extend %button-square;
+   }
+
+   &__designer {
+      font-size: 15px;
+      line-height: 18px;
+      color: #FFFFFF;
+      font-weight: 100;
+      justify-self: end;
+      cursor: pointer;
+
+      &:hover {
+         color: $orange;
+      }
+
+      &:active {
+         color: $green;
+         text-decoration: underline;
+      }
+   }
+
+   &__name {
+      padding: 40px 0 13px 0;
+   }
+
+   &__list {
+      @extend %flex-btw;
+      padding: 40px 0 30px 0;
+      min-width: 280px;
+
+   }
+
+   &__item {
+      a {
+         color: #FFFFFF;
+         font-size: 16px;
+         line-height: 22px;
+
+         &:hover {
+            color: #E47209;
+         }
+
+         &:active {
+            color: #4B9200;
+         }
+      }
+
+   }
+
+}
+
+/*FOOTER END*/
+
+@media screen and (min-width: 0px) {
+   .testimonials {
+      .block-4 {
+         display: none;
+      }
+
+      &__scrollbar {
+         display: none;
+      }
+   }
+}
+
+@media screen and (min-width: 639px) {
+
+   .container {
+      padding: 0 20px;
+   }
+
+   .testimonials {
+      background-position: right 112%;
+      background-size: 115px;
+
+      .block-1 &__block-background {
+         padding: 11.8px 11.2px;
+      }
+
+      .block-1 .feadback-text {
+         padding: 1px 0 0 3.5px;
+      }
+
+      .block-2 .feadback-text {
+         padding: 0px 0 0 8px;
+      }
+
+      .block-3 &__block-background {
+         padding: 12px;
+      }
+
+      .block-3 .feadback-text {
+         padding: 0 0 0 2px;
+      }
+
+      &__title {
+         font-size: 36px;
+         padding: 60px 0 30px 0;
+      }
+
+      &__button-body {
+         padding: 40px 0 80px 0;
+      }
+
+   }
+
+   .footer {
+      &__grid {
+         grid-template-columns: 50% 50%;
+         justify-items: start;
+         align-items: start;
+         padding: 12px 0;
+      }
+
+      &__title {
+         max-width: 82px;
+         border: 0.5px solid #FFFFFF;
+         border-radius: 2px;
+         padding: 3px;
+         margin: 0 0 5px 0;
+
+         img {
+            top: 44%;
+            left: 12%;
+         }
+      }
+
+      &__social {
+         flex-direction: column;
+         justify-self: end;
+         align-items: flex-end;
+         grid-row-start: span 2;
+         max-width: none;
+         min-height: 165px;
+      }
+
+      &__email {
+         display: none;
+      }
+
+      &__designer {
+         order: 2;
+         font-size: 16px;
+         line-height: 20px
+      }
+
+      &__list {
+         padding: 70px 0 0 0;
+         min-width: 300px;
+      }
+
+   }
+}
+
+@media screen and (min-width: 999px) {
+
+   .container {
+      padding: 0;
+      max-width: 940px;
+      margin: 0 auto;
+   }
+
+   .testimonials {
+      background-position: right 115.9%;
+      background-size: 193px;
+
+      &__title {
+         padding: 100px 0 30px 0;
+      }
+
+      &__row {
+         @extend %flex-btw;
+         flex-direction: row;
+         gap: 30px;
+      }
+
+      &__scrollbar {
+         display: block;
+         margin: 0 auto;
+         position: relative;
+         top: 20px;
+         max-width: 390px;
+         height: 8px;
+         border-radius: 8px;
+         background: linear-gradient(to left, rgba(254, 189, 171, 0.74) 6.48%, rgba(243, 169, 248, 0.66) 22.51%, #E0D8F0 45.57%, #EAF7FE 82.33%, #EAF7FE 99.1%);
+      }
+
+      .scrollbar {
+         position: absolute;
+         top: 0.75px;
+         left: 0.75px;
+         appearance: none;
+         width: 99.5%;
+         border-radius: 10%;
+         height: 6.5px;
+         background: #F5F7F6;
+         outline: none;
+         -webkit-transition: 0.2s;
+         transition: opacity 0.2s;
+      }
+
+      .scrollbar:hover {
+         opacity: 1;
+      }
+
+      .scrollbar::-webkit-slider-thumb {
+         appearance: none;
+         width: 75px;
+         height: 6px;
+         background: #FE9013;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      .scrollbar::-moz-range-thumb {
+         width: 75px;
+         height: 6px;
+         background: #FE9013;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      &__block-body {
+         max-height: 391px;
+         min-width: 293px;
+      }
+
+      .block-1 &__block-background {
+         padding: 12px 0 12px 16.5px;
+      }
+
+      .block-1 .feadback-text {
+         padding: 1.5px 18px 0 1px;
+      }
+
+      .block-2 &__block-background {
+         padding: 9px 0 19px 10px;
+      }
+
+      .block-2 .feadback-text {
+         padding: 8px 19px 0 3px;
+      }
+
+      .feedback {
+         min-height: 322px;
+      }
+
+      .feadback-text {
+         color: #767474;
+      }
+
+      &__button {
+         min-width: 298px;
+      }
+
+      &__button-body {
+         justify-content: flex-start;
+         padding: 71px 0 140px 0;
+      }
+   }
+
+   .footer {
+
+      &__grid {
+         grid-template-columns: repeat(3, 1fr);
+         padding: 40px 0 50px 0;
+      }
+
+      &__social {
+         flex-direction: column;
+         justify-self: start;
+         align-items: flex-start;
+         grid-row-start: 3;
+         grid-column-start: span 1;
+         max-width: none;
+         min-height: 165px;
+
+         span {
+            display: block;
+         }
+      }
+
+      &__circle {
+         justify-content: flex-start;
+      }
+
+      &__social span {
+         display: block;
+         color: #FFF;
+         font-size: 16px;
+         line-height: 22px;
+      }
+
+      &__facebook {
+         padding: 0 25px 0 8px;
+      }
+
+      &__twitter {
+         padding: 0 20px 0 5px;
+      }
+
+      &__instagram {
+         padding: 0 20px 0 5px;
+      }
+
+      &__youtube {
+         padding: 0 18px 0 4px;
+      }
+
+      &__link-social {
+         display: flex;
+      }
+
+      &__email {
+         display: block;
+         grid-column: 3/span 3;
+         justify-self: end;
+         justify-items: start;
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         padding: 0 32px 0 0;
+      }
+
+      &__subtitle {
+         grid-column: span 3;
+         padding: 1px 0 14px 5px;
+         margin: 0;
+         justify-self: start;
+         font-size: 24px;
+         line-height: 29px;
+      }
+
+      &__button-submit {
+         margin: 0;
+      }
+
+      &__email-form {
+         padding: 0 7px 0 0;
+      }
+
+      &__button-body {
+         grid-column-start: 1;
+         grid-row-start: 2;
+         padding: 36px 0 45px 0;
+      }
+
+      &__social {
+         min-height: 133px;
+      }
+
+      &__menu {
+         grid-column-start: 2;
+         grid-row-start: 3;
+         margin: 0 0 0 -20px;
+      }
+
+      &__designer {
+         grid-column-start: 3;
+         grid-row-start: 3;
+         padding: 40px 0 0 0;
+      }
+
+      &__list {
+         padding: 111px 0 0 0;
+         min-width: 330px;
+      }
+   }
+}
+
+@media screen and (min-width: 1440px) {
+
+   .container {
+      max-width: 1160px;
+   }
+
+   .testimonials {
+      background-size: 230px;
+      background-position: 100% 120%;
+
+      &__title {
+         padding: 140px 0 47px;
+      }
+
+      &__block-body {
+         min-width: 268px;
+      }
+
+      &__row {
+         gap: 0px;
+      }
+
+      .block-1 {
+         order: 1;
+         margin: 0 30px 0 0;
+      }
+
+      .block-1 .feadback-text {
+         padding: 1.5px 15px 0 0px;
+      }
+
+      .block-2 {
+         order: 4;
+      }
+
+      .block-2 .name {
+         display: none;
+      }
+
+      .block-2 .name-mila {
+         display: block;
+      }
+
+      .block-2 .user-img {
+         padding: 2px 0 0 2px;
+      }
+
+      .block-2 .user-data {
+         padding: 3px 4px 2px;
+      }
+
+      .block-2 .feedback {
+         padding: 0px 0 10px 0;
+      }
+
+      .block-3 {
+         order: 3;
+         margin: 0 32px 0 0;
+      }
+
+      .block-3 .user-data {
+         padding: 0px 4px 2px;
+      }
+
+      .block-4 {
+         display: block;
+         order: 2;
+         margin: 0 29px 0 0;
+      }
+
+      .block-4 .user-img {
+         padding: 0 0 0 2px;
+      }
+
+      .block-4 .user-data {
+         padding: 5px 4px 2px;
+      }
+
+      .block-4 .feedback {
+         padding: 7px 0 10px 0;
+      }
+
+      &__scrollbar {
+         max-width: 600px;
+      }
+
+      .scrollbar::-webkit-slider-thumb {
+         width: 116px;
+      }
+
+      .scrollbar::-moz-range-thumb {
+         width: 116px;
+      }
+
+      &__button-body {
+         padding: 52px 0 180px 0;
+      }
+   }
+
+   .footer {
+
+      &__email {
+         padding: 0 0 0 20px;
+      }
+
+      &__menu {
+         margin: 0 0 0 12px;
+      }
+
+      &__list {
+         min-width: 362px;
+      }
+
+   }
+}
