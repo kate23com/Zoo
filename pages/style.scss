@@ -12,11 +12,87 @@ body {
    margin: 0 auto;
 }
 
-/*TESTIMONIALS START*/
-
 .container {
    padding: 0 10px;
 }
+
+/*HEADER START*/
+
+.header {
+   min-height: 34px;
+   background-color: #111115;
+
+   &__body {
+      @extend %grid;
+      grid-template: 1fr / minmax(54px, auto) 20px;
+      justify-items: baseline;
+   }
+
+   &__title {
+      @extend %logo;
+      position: relative;
+      border: none;
+      text-align: center;
+      font-size: 12.29px;
+      line-height: 15px;
+      max-width: 53px;
+      margin: 0;
+      padding: 2px;
+
+      img {
+         position: absolute;
+         top: 47%;
+         left: 15%;
+         width: 7px;
+         height: 13.56px;
+      }
+
+      a {
+         color: #FFFFFF;
+      }
+   }
+
+   &__burger {
+      position: relative;
+      width: 18px;
+      height: 10px;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         border-radius: 2px;
+         background-color: #FFF;
+         width: 100%;
+         height: 2px;
+         left: 0;
+      }
+
+      &::before {
+         top: 0;
+      }
+
+      &::after {
+         bottom: 0;
+      }
+
+      span {
+         position: absolute;
+         background-color: #FFF;
+         width: 100%;
+         height: 2px;
+         border-radius: 2px;
+         top: 4px;
+         left: 0;
+      }
+   }
+
+   &__menu {
+      display: none;
+   }
+}
+
+/*TESTIMONIALS START*/
 
 .testimonials {
    background: url(../asets/img/testimonials-bg.png) no-repeat;
@@ -103,8 +179,6 @@ body {
 
 }
 
-/*TESTIMONIALS END*/
-
 /*FOOTER START*/
 .footer {
    background-color: #111115;
@@ -125,6 +199,10 @@ body {
          top: 24%;
          left: 58%;
       }
+
+      a {
+         color: #FFFFFF;
+      }
    }
 
    &__social {
@@ -141,7 +219,8 @@ body {
 
       span {
          display: none;
-      &:hover {
+
+         &:hover {
             color: $green;
          }
       }
@@ -262,7 +341,7 @@ body {
 
 }
 
-/*FOOTER END*/
+/*MEDIA 0PX - START*/
 
 @media screen and (min-width: 0px) {
    .testimonials {
@@ -275,6 +354,8 @@ body {
       }
    }
 }
+
+/*MEDIA 640PX - START*/
 
 @media screen and (min-width: 639px) {
 
@@ -365,12 +446,64 @@ body {
    }
 }
 
+/*MEDIA 1000PX - START*/
+
 @media screen and (min-width: 999px) {
 
    .container {
       padding: 0;
       max-width: 940px;
       margin: 0 auto;
+   }
+
+   .header {
+      &__burger {
+         display: none;
+      }
+
+      &__menu {
+         display: block;
+      }
+
+      &__title {
+         border: 0.5px solid #fff;
+         font-size: 19px;
+         line-height: 23px;
+         max-width: 82px;
+         margin: 14.12px 0;
+
+         img {
+            width: 15px;
+            height: 20px;
+            left: 11%;
+         }
+      }
+
+      &__list {
+         display: flex;
+         justify-items: center;
+         align-items: center;
+         color: #FFF;
+      }
+
+      &__item {
+         cursor: pointer;
+         margin: 0 48px 0 0;
+
+         &:last-child {
+            margin: 0;
+         }
+
+         &:hover {
+            color: $orange;
+         }
+      }
+
+      &__body {
+         grid-template: 1fr / minmax(145px, auto) 1fr;
+         justify-items: baseline;
+      }
+
    }
 
    .testimonials {
@@ -487,21 +620,18 @@ body {
          grid-column-start: span 1;
          max-width: none;
          min-height: 165px;
+         // min-height: 133px;
 
          span {
             display: block;
+            color: #FFF;
+            font-size: 16px;
+            line-height: 22px;
          }
       }
 
       &__circle {
          justify-content: flex-start;
-      }
-
-      &__social span {
-         display: block;
-         color: #FFF;
-         font-size: 16px;
-         line-height: 22px;
       }
 
       &__facebook {
@@ -557,10 +687,6 @@ body {
          padding: 36px 0 45px 0;
       }
 
-      &__social {
-         min-height: 133px;
-      }
-
       &__menu {
          grid-column-start: 2;
          grid-row-start: 3;
@@ -579,6 +705,7 @@ body {
       }
    }
 }
+
 
 @media screen and (min-width: 1440px) {
 

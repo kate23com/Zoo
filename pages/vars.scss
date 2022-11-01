@@ -50,7 +50,6 @@ $green: #4B9200;
    }
 }
 
-
 %flex-btw {
    display: flex;
    justify-content: space-between;
@@ -74,5 +73,15 @@ $green: #4B9200;
    text-align: center;
    justify-items: center;
    align-items: center;
+}
 
+%logo {
+   max-width: 82px;
+   font-size: 19px;
+   line-height: 23px;
+   border: 0.5px solid #FFFFFF;
+   color: #FFFFFF;
+   border-radius: 2px;
+   padding: 3px;
+   margin: 0 0 5px 0;
 }

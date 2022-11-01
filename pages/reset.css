@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Обнуляющий тег*/
 * {
   padding: 0;
@@ -52,7 +53,8 @@ input::-ms-clear {
   display: none;
 }
 
-button {
+button,
+a {
   cursor: pointer;
 }
 
@@ -88,4 +90,5 @@ h6 {
   font-weight: 400;
 }
 
-/* Обнуляющий тег конец*//*# sourceMappingURL=reset.css.map */
+/* Обнуляющий тег конец*/
+/*# sourceMappingURL=reset.css.map */
