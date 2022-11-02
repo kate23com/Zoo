@@ -24,6 +24,28 @@ $black: black;
    }
 }
 
+%button-circle {
+   width: 298px;
+   height: 54px;
+   border-radius: 25px;
+   background-image: linear-gradient(to left, #F9804B 0%, #FE9013 100%);
+   color: #FFFFFF;
+   font-size: 16px;
+   text-transform: uppercase;
+
+   &:hover {
+      background: #E47209;
+   }
+
+   &:active {
+      background: #4B9200;
+   }
+
+   &:disabled {
+      background: #767474;
+   }
+}
+
 %button-submit {
    height: 42px;
    width: 129px;
